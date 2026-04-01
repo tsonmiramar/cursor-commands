@@ -1,39 +1,38 @@
 {
   "project": ".",
   "monorepoRoot": ".",
-  "branchName": "APP-XXXX",
-  "description": "One-paragraph summary: ticket ID, goal, parent epic, Jira link, affected packages/paths, verification approach (e.g. RTL vs browser), and pointers to coding standards (monorepo guide, .cursorrules).",
+  "branchName": "TICKET-123",
+  "description": "Single summary: goal, issue tracker link, affected areas (services, apps, paths), how acceptance will be verified (tests, manual checklist, etc.), and links or pointers to team standards if needed.",
   "userStories": [
     {
       "id": "US-001",
-      "repo": "ai-cm-config-server",
-      "title": "Short imperative title (what ships)",
+      "repo": "<repository-or-package-name>",
+      "title": "Imperative title describing the deliverable",
       "description": "As a <role>, I need <capability> so that <outcome>.",
       "acceptanceCriteria": [
-        "Concrete, testable bullet (behavior or file/location)",
-        "Another criterion (include \"npm test passes\" / \"Typecheck passes\" / \"Prettier\" where relevant)",
-        "Architecture constraints if they apply (handlers vs middleware, DAL rules, etc.)"
+        "Observable behavior or interface change, stated so it can be verified",
+        "Quality bar for this repo (e.g. tests pass, lint/format, typecheck as applicable)",
+        "Non-functional or architectural notes only if they gate acceptance"
       ],
       "priority": 1,
       "passes": false,
       "dependsOn": [],
-      "notes": "Optional: implementation hints, edge cases, links to mocks or schemas."
+      "notes": "Optional: risks, dependencies, out-of-scope reminders."
     },
     {
       "id": "US-002",
-      "repo": "ai-case-manager",
-      "title": "Dependent story title",
-      "description": "As a developer, I need types and UI aligned with US-001 so the feature is end-to-end consistent.",
+      "repo": "<repository-or-package-name>",
+      "title": "Follow-up or dependent deliverable",
+      "description": "As a <role>, I need work that builds on US-001 to remain consistent end to end.",
       "acceptanceCriteria": [
-        "Depends on prior story: list fields, types, or UI behaviors",
-        "data-testid or RTL expectations when UI is involved",
-        "npm test passes in <repo>",
-        "Typecheck passes"
+        "Criteria tied to the dependency (e.g. contract, types, or UX aligned with US-001)",
+        "Tests or checks appropriate to this component",
+        "Any cross-repo coordination explicitly stated"
       ],
       "priority": 2,
       "passes": false,
       "dependsOn": ["US-001"],
-      "notes": "Optional cross-story coordination."
+      "notes": "Optional."
     }
   ]
 }
