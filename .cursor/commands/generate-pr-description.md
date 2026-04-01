@@ -4,6 +4,10 @@
 
 Create a comprehensive pull request description based on the changes in this branch and format it as proper markdown for use in a GitHub PR description.
 
+## MR title
+
+Use **conventional commit style** with a `feat` or `fix` prefix and the ticket number (e.g. `feat(APP-1618): add contact point model` or `fix(APP-1620): inbound webhook validation`). The ticket in the title must match the branch name (e.g. branch `APP-1620` → title includes `APP-1620`). When generating the PR description, also propose an MR title that follows this rule.
+
 ## Steps
 
 1. **Summary**
