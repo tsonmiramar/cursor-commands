@@ -1,0 +1,39 @@
+{
+  "project": ".",
+  "monorepoRoot": ".",
+  "branchName": "APP-XXXX",
+  "description": "One-paragraph summary: ticket ID, goal, parent epic, Jira link, affected packages/paths, verification approach (e.g. RTL vs browser), and pointers to coding standards (monorepo guide, .cursorrules).",
+  "userStories": [
+    {
+      "id": "US-001",
+      "repo": "ai-cm-config-server",
+      "title": "Short imperative title (what ships)",
+      "description": "As a <role>, I need <capability> so that <outcome>.",
+      "acceptanceCriteria": [
+        "Concrete, testable bullet (behavior or file/location)",
+        "Another criterion (include \"npm test passes\" / \"Typecheck passes\" / \"Prettier\" where relevant)",
+        "Architecture constraints if they apply (handlers vs middleware, DAL rules, etc.)"
+      ],
+      "priority": 1,
+      "passes": false,
+      "dependsOn": [],
+      "notes": "Optional: implementation hints, edge cases, links to mocks or schemas."
+    },
+    {
+      "id": "US-002",
+      "repo": "ai-case-manager",
+      "title": "Dependent story title",
+      "description": "As a developer, I need types and UI aligned with US-001 so the feature is end-to-end consistent.",
+      "acceptanceCriteria": [
+        "Depends on prior story: list fields, types, or UI behaviors",
+        "data-testid or RTL expectations when UI is involved",
+        "npm test passes in <repo>",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": false,
+      "dependsOn": ["US-001"],
+      "notes": "Optional cross-story coordination."
+    }
+  ]
+}
